@@ -9,7 +9,7 @@ const messages = Object.fromEntries(
 
 export default createI18n({
   legacy: false,
-  locale: localStorage.getItem('lang') || 'en',
+  locale: localStorage.getItem('lang') || 'ko',
   fallbackLocale: 'en',
   messages,
 });
