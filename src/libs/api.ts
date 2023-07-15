@@ -133,6 +133,30 @@ export const DEFAULT: RequestRegistry = {
     url: '/cosmos/base/tendermint/v1beta1/validatorsets/{height}',
     adapter,
   },
+  base_ostracon_abci_query: {
+    url: '/lbm/base/ostracon/v1/abci_query',
+    adapter,
+  },
+  base_ostracon_block_latest: {
+    url: '/lbm/base/ostracon/v1/blocks/latest',
+    adapter,
+  },
+  base_ostracon_block_height: {
+    url: '/lbm/base/ostracon/v1/blocks/{height}',
+    adapter,
+  },
+  base_ostracon_node_info: {
+    url: '/lbm/base/ostracon/v1/node_info',
+    adapter,
+  },
+  base_ostracon_validatorsets_latest: {
+    url: '/lbm/base/ostracon/v1/validatorsets/latest',
+    adapter,
+  },
+  base_ostracon_validatorsets_height: {
+    url: '/lbm/base/ostracon/v1/validatorsets/{height}',
+    adapter,
+  },
   tx_txs: { url: '/cosmos/tx/v1beta1/txs', adapter },
   tx_txs_block: { url: '/cosmos/tx/v1beta1/txs/block/{height}', adapter },
   tx_hash: { url: '/cosmos/tx/v1beta1/txs/{hash}', adapter },

@@ -15,6 +15,8 @@ export const store = 'version' // name or version
 // Blockchain Name
 export const name = 'v0.46.7'
 
+const VER_PROPOSAL = 'v1beta1'  // c.f. upstream pingpub is 'v1'
+
 function proposalAdapter(p: any): GovProposal {
     if(p) {
         if(p.messages && p.messages.length >= 1) p.content = p.messages[0].content || p.messages[0]
@@ -33,7 +35,7 @@ export const requests: Partial<RequestRegistry> = {
   gov_params_voting: { url: '/cosmos/gov/v1/params/voting', adapter },
   gov_params_tally: { url: '/cosmos/gov/v1/params/tallying', adapter },
   gov_params_deposit: { url: '/cosmos/gov/v1/params/deposit', adapter },
-  gov_proposals: { url: '/cosmos/gov/v1/proposals', adapter: (source: any): PaginatedProposals => {
+  gov_proposals: { url: `/cosmos/gov/${VER_PROPOSAL}/proposals`, adapter: (source: any): PaginatedProposals => {
     const proposals = source.proposals.map((p:any) => proposalAdapter(p))
     return {
         proposals,
@@ -41,7 +43,7 @@ export const requests: Partial<RequestRegistry> = {
     }
   }},
   gov_proposals_proposal_id: {
-    url: '/cosmos/gov/v1/proposals/{proposal_id}',
+    url: `/cosmos/gov/${VER_PROPOSAL}/proposals/{proposal_id}`,
     adapter: (source: any): {proposal: GovProposal} => {
         return {
             proposal: proposalAdapter(source.proposal)
@@ -49,19 +51,19 @@ export const requests: Partial<RequestRegistry> = {
     },
   },
   gov_proposals_deposits: {
-    url: '/cosmos/gov/v1/proposals/{proposal_id}/deposits',
+    url: `/cosmos/gov/${VER_PROPOSAL}/proposals/{proposal_id}/deposits`,
     adapter,
   },
   gov_proposals_tally: {
-    url: '/cosmos/gov/v1/proposals/{proposal_id}/tally',
+    url: `/cosmos/gov/${VER_PROPOSAL}/proposals/{proposal_id}/tally`,
     adapter,
   },
   gov_proposals_votes: {
-    url: '/cosmos/gov/v1/proposals/{proposal_id}/votes',
+    url: `/cosmos/gov/${VER_PROPOSAL}/proposals/{proposal_id}/votes`,
     adapter,
   },
   gov_proposals_votes_voter: {
-    url: '/cosmos/gov/v1/proposals/{proposal_id}/votes/{voter}',
+    url: `/cosmos/gov/${VER_PROPOSAL}/proposals/{proposal_id}/votes/{voter}`,
     adapter,
   },
 }

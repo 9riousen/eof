@@ -1,0 +1,21 @@
+{
+    "chain_name": "Finschia",
+    "api": [
+        {"provider": "scan", "address": "https://lbs-finschianw.line-apps.com"}
+    ],
+    "rpc": [
+        {"provider": "vault", "address": "https://dsvt-finschia-api.line-apps.com"}
+    ],
+    "sdk_version": "0.47.0",
+    "coin_type": "438",
+    "min_tx_fee": null,
+    "addr_prefix": "link",
+    "logo": "https://assets.coingecko.com/coins/images/6450/large/FINSCHIA_coin_icon%28black%29.png",
+    "assets": [{
+        "base": "ucony",
+        "symbol": "CONY",
+        "exponent": "6",
+        "coingecko_id": "link", 
+        "logo": "https://assets.coingecko.com/coins/images/6450/large/FINSCHIA_coin_icon%28black%29.png"
+    }]
+}

@@ -228,28 +228,28 @@ export class CosmosRestClient extends BaseRestClient<RequestRegistry> {
     );
   }
 
-  //tendermint
+  // ostracon (was tendermint)
   async getBaseAbciQuery() {
-    return this.request(this.registry.base_tendermint_abci_query, {});
+    return this.request(this.registry.base_ostracon_abci_query, {});
   }
   async getBaseBlockLatest() {
-    return this.request(this.registry.base_tendermint_block_latest, {});
+    return this.request(this.registry.base_ostracon_block_latest, {});
   }
   async getBaseBlockAt(height: string | number) {
-    return this.request(this.registry.base_tendermint_block_height, { height });
+    return this.request(this.registry.base_ostracon_block_height, { height });
   }
   async getBaseNodeInfo() {
-    return this.request(this.registry.base_tendermint_node_info, {});
+    return this.request(this.registry.base_ostracon_node_info, {});
   }
   async getBaseValidatorsetAt(height: string | number, offset: number) {
     const query = `?pagination.limit=100&pagination.offset=${offset}`
-    return this.request(this.registry.base_tendermint_validatorsets_height, {
+    return this.request(this.registry.base_ostracon_validatorsets_height, {
       height,
     }, query);
   }
   async getBaseValidatorsetLatest(offset: number) {
     const query = `?pagination.limit=100&pagination.offset=${offset}`
-    return this.request(this.registry.base_tendermint_validatorsets_latest, {}, query);
+    return this.request(this.registry.base_ostracon_validatorsets_latest, {}, query);
   }
   // tx
   async getTxsBySender(sender: string, page?: PageRequest) {
