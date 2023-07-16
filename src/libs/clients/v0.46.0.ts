@@ -20,7 +20,7 @@ const VER_PROPOSAL = 'v1beta1'  // c.f. upstream pingpub is 'v1'
 function proposalAdapter(p: any): GovProposal {
     if(p) {
         if(p.messages && p.messages.length >= 1) p.content = p.messages[0].content || p.messages[0]
-        p.proposal_id = p.id
+        p.proposal_id = p.proposal_id
         p.final_tally_result = {
             yes: p.final_tally_result?.yes_count,
             no: p.final_tally_result?.no_count,
