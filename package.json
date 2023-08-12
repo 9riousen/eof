@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@chenfengyuan/vue-countdown": "2",
+    "@cosmjs/amino": "^0.31.0",
     "@cosmjs/crypto": "^0.29.5",
     "@cosmjs/encoding": "^0.29.5",
     "@cosmjs/proto-signing": "^0.31.0",
