@@ -204,7 +204,7 @@ function selected(route: any, nav: NavLink) {
         </div>
       </div>
       <div class="px-2">
-        <div class="px-4 text-sm pt-2 text-gray-400 pb-2 uppercase">
+        <!-- <div class="px-4 text-sm pt-2 text-gray-400 pb-2 uppercase">
           {{ $t('module.sponsors') }}
         </div>
 
@@ -213,7 +213,7 @@ function selected(route: any, nav: NavLink) {
      data-ad-client="ca-pub-2280493260042583"
      data-ad-slot="8761326962"
      data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
+     data-full-width-responsive="true"></ins> -->
 
         <div class="px-4 text-sm pt-2 text-gray-400 pb-2 uppercase">{{ $t('module.links') }}</div>
         <a
