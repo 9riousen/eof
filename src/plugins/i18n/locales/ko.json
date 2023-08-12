@@ -179,8 +179,8 @@
   "staking": {
     "inflation": "인플레이션",
     "unbonding_time": "Unbonding Time",
-    "double_sign_slashing": "Double Sign Slashing",
-    "downtime_slashing": "Downtime Slashing",
+    "double_sign_slashing": "이중서명 지분삭감",
+    "downtime_slashing": "다운타임 지분삭감",
     "popular": "인기",
     "active": "활성",
     "inactive": "비활성",
