@@ -62,15 +62,6 @@ export const useBlockchain = defineStore('blockchain', {
       const router = useRouter();
       const routes = router?.getRoutes() || [];
       if (this.current && routes) {
-        if (this.current?.themeColor) {
-          const { color } = hexToRgb(this.current?.themeColor);
-          const { h, s, l } = rgbToHsl(color);
-          const themeColor = h + ' ' + s + '% ' + l +'%';
-          document.body.style.setProperty('--p', `${themeColor}`);
-          // document.body.style.setProperty('--p', `${this.current?.themeColor}`);
-        } else {
-          document.body.style.setProperty('--p', '237.65 100% 70%');
-        }
         currNavItem = [
           {
             title: this.current?.prettyName || this.chainName || '',
@@ -134,10 +125,6 @@ export const useBlockchain = defineStore('blockchain', {
   },
   actions: {
     async initial() {
-      // this.current?.themeColor {
-      //     const { global } = useTheme();
-      //     global.current
-      // }
       useWalletStore().$reset();
       await this.randomSetupEndpoint();
       await useStakingStore().init();
