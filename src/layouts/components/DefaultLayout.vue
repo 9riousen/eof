@@ -4,7 +4,6 @@ import { ref } from 'vue';
 
 // Components
 import newFooter from '@/layouts/components/NavFooter.vue';
-import NavbarThemeSwitcher from '@/layouts/components/NavbarThemeSwitcher.vue';
 import NavbarSearch from '@/layouts/components/NavbarSearch.vue';
 import ChainProfile from '@/layouts/components/ChainProfile.vue';
 
@@ -272,7 +271,6 @@ function selected(route: any, nav: NavLink) {
 
         <!-- <NavSearchBar />-->
         <NavBarI18n class="hidden md:!inline-block" />
-        <NavbarThemeSwitcher class="!inline-block" />
         <NavbarSearch class="!inline-block" />
         <NavBarWallet />
       </div>
