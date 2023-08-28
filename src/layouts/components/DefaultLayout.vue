@@ -250,7 +250,7 @@ function selected(route: any, nav: NavLink) {
           class="text-2xl pr-3 cursor-pointer xl:!hidden"
           @click="sidebarShow = true"
         >
-          <Icon icon="mdi-menu" />
+          <Icon icon="mdi-menu" class="text-primary"/>
         </div>
 
         <ChainProfile />
