@@ -51,7 +51,7 @@ function selected(route: any, nav: NavLink) {
 </script>
 
 <template>
-  <div class="bg-primary">
+  <div class="bg-primary text-primary-content">
     <!-- sidebar -->
     <div
       class="w-64 fixed z-50 left-0 top-0 bottom-0 overflow-auto bg-primary"
@@ -59,9 +59,9 @@ function selected(route: any, nav: NavLink) {
     >
       <div class="flex justify-between mt-1 pl-4 py-4 mb-1">
         <RouterLink to="/" class="flex items-center">
-          <img class="w-10 h-10" src="../../assets/logo.svg" />
+          <img class="w-10 h-10" :src="blockchain.logo" />
           <h1 class="flex-1 ml-3 text-2xl font-semibold dark:text-white">
-            Ping.pub
+            핀샤의눈
           </h1>
         </RouterLink>
         <div
@@ -109,7 +109,7 @@ function selected(route: any, nav: NavLink) {
               class="w-6 h-6 rounded-full mr-3"
             />
             <div
-              class="text-base capitalize flex-1 text-gray-700 dark:text-gray-200 whitespace-nowrap"
+              class="text-base capitalize flex-1 whitespace-nowrap"
             >
               {{ item?.title }}
             </div>
@@ -214,18 +214,14 @@ function selected(route: any, nav: NavLink) {
      data-ad-format="auto"
      data-full-width-responsive="true"></ins> -->
 
-        <div class="px-4 text-sm pt-2 text-gray-400 pb-2 uppercase">{{ $t('module.links') }}</div>
+        <div class="px-4 text-sm pt-2 pb-2 uppercase">{{ $t('module.links') }}</div>
         <a
           href="https://twitter.com/finschia"
           target="_blank"
           class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 dark:hover:bg-[#373f59]"
         >
           <Icon icon="mdi:twitter" class="text-xl mr-2" />
-          <div
-            class="text-base capitalize flex-1 text-gray-600 dark:text-gray-200"
-          >
-            Twitter
-          </div>
+          <div class="text-base capitalize flex-1">Twitter</div>
         </a>
         <a
           href="https://discord.gg/finschia"
@@ -233,11 +229,7 @@ function selected(route: any, nav: NavLink) {
           class="py-2 px-4 flex items-center rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-[#373f59]"
         >
           <Icon icon="mdi:discord" class="text-xl mr-2" />
-          <div
-            class="text-base capitalize flex-1 text-gray-600 dark:text-gray-200"
-          >
-            Discord
-          </div>
+          <div class="text-base capitalize flex-1">Discord</div>
         </a>
         <a
           href="https://github.com/ping-pub/explorer/discussions"
@@ -245,11 +237,7 @@ function selected(route: any, nav: NavLink) {
           class="py-2 px-4 flex items-center rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-[#373f59]"
         >
           <Icon icon="mdi:frequently-asked-questions" class="text-xl mr-2" />
-          <div
-            class="text-base capitalize flex-1 text-gray-600 dark:text-gray-200"
-          >
-            FAQ
-          </div>
+          <div class="text-base capitalize flex-1">FAQ</div>
         </a>
       </div>
     </div>
