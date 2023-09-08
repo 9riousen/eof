@@ -19,8 +19,6 @@ import CardStatisticsVertical from '@/components/CardStatisticsVertical.vue';
 import ProposalListItem from '@/components/ProposalListItem.vue';
 import ArrayObjectElement from '@/components/dynamic/ArrayObjectElement.vue'
 
-const props = defineProps(['chain']);
-
 const blockchain = useBlockchain();
 const store = useIndexModule();
 const walletStore = useWalletStore();
@@ -43,6 +41,7 @@ const ticker = computed(() => store.coinInfo.tickers[store.tickerIndex]);
 
 const currName = ref("")
 blockchain.$subscribe((m, s) => {
+  console.log(`(m,s) => `,m, s);
   if (s.chainName !== currName.value) {
     currName.value = s.chainName
     store.loadDashboard();
