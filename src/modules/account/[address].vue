@@ -21,7 +21,7 @@ import type {
 import type { Coin } from '@cosmjs/amino';
 import Countdown from '@/components/Countdown.vue';
 
-const props = defineProps(['address', 'chain']);
+const props = defineProps(['address']);
 
 const blockchain = useBlockchain();
 const stakingStore = useStakingStore();
@@ -359,7 +359,7 @@ function updateEvent() {
             <tr v-for="(v, index) in delegations" :key="index">
               <td class="text-caption text-primary py-3">
                 <RouterLink
-                  :to="`/${chain}/staking/${v.delegation.validator_address}`"
+                  :to="`/staking/${v.delegation.validator_address}`"
                   >{{
                     format.validatorFromBech32(v.delegation.validator_address) || v.delegation.validator_address
                   }}</RouterLink
@@ -450,7 +450,7 @@ function updateEvent() {
               <tr>
                 <td class="text-caption text-primary py-3 bg-slate-200" colspan="10">
                   <RouterLink
-                    :to="`/${chain}/staking/${v.validator_address}`"
+                    :to="`/staking/${v.validator_address}`"
                     >{{
                       v.validator_address
                     }}</RouterLink
@@ -509,12 +509,12 @@ function updateEvent() {
             <tr v-if="txs.length === 0"><td colspan="10"><div class="text-center">{{ $t('account.no_transactions') }}</div></td></tr>
             <tr v-for="(v, index) in txs" :key="index">
               <td class="text-sm py-3">
-                <RouterLink :to="`/${chain}/block/${v.height}`" class="text-primary dark:invert">{{
+                <RouterLink :to="`/block/${v.height}`" class="text-primary dark:invert">{{
                   v.height
                 }}</RouterLink>
               </td>
               <td class="truncate py-3" style="max-width: 200px">
-                <RouterLink :to="`/${chain}/tx/${v.txhash}`" class="text-primary dark:invert">
+                <RouterLink :to="`/tx/${v.txhash}`" class="text-primary dark:invert">
                   {{ v.txhash }}
                 </RouterLink>
               </td>
