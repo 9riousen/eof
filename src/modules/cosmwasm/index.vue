@@ -6,8 +6,6 @@ import type { PaginabledCodeInfos } from './types';
 import { PageRequest } from '@/types';
 import PaginationBar from '@/components/PaginationBar.vue';
 
-const props = defineProps(['chain']);
-
 const codes = ref({} as PaginabledCodeInfos);
 
 const pageRequest = ref(new PageRequest())
@@ -39,7 +37,7 @@ pageload(1)
                     <tr v-for="(v, index) in codes.code_infos" :key="index">
                         <td>{{ v.code_id }}</td>
                         <td>
-                            <RouterLink :to="`/${props.chain}/cosmwasm/${v.code_id}/contracts`"
+                            <RouterLink :to="`/cosmwasm/${v.code_id}/contracts`"
                                 class="truncate max-w-[200px] block text-primary dark:invert" :title="v.data_hash">
                                 {{ v.data_hash }}
                             </RouterLink>
