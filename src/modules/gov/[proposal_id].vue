@@ -22,7 +22,7 @@ import PaginationBar from '@/components/PaginationBar.vue';
 import { fromBech32, toHex } from '@cosmjs/encoding';
 
 
-const props = defineProps(['proposal_id', 'chain']);
+const props = defineProps(['proposal_id']);
 const proposal = ref({} as GovProposal);
 const format = useFormatter();
 const store = useGovStore();
