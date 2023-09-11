@@ -1,9 +1,8 @@
 import { useBlockchain } from '@/stores';
 import numeral from 'numeral';
 
-const chainStore = useBlockchain()
-
 const themeColors = (theme: string) => {
+  const chainStore = useBlockchain()
   if (theme === 'light') {
     return {
       dark: false,
