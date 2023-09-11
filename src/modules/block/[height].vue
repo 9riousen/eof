@@ -9,7 +9,7 @@ import { useBaseStore, useFormatter } from '@/stores';
 import type { Block } from '@/types';
 import Countdown from '@/components/Countdown.vue';
 
-const props = defineProps(['height', 'chain']);
+const props = defineProps(['height']);
 
 const store = useBaseStore();
 const format = useFormatter()

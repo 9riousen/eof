@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { computed, ref } from '@vue/reactivity';
 import { useBaseStore, useFormatter } from '@/stores';
-const props = defineProps(['chain']);
 
 const tab = ref('blocks');
 
@@ -21,7 +20,7 @@ const list = computed(() => {
             <a class="tab text-gray-400 uppercase" :class="{ 'tab-active': tab === 'blocks' }"
                 @click="tab = 'blocks'">{{ $t('block.recent') }}</a>
             <RouterLink class="tab text-gray-400 uppercase" 
-                :to="`/${chain}/block/${Number(base.latest?.block?.header.height||0) + 10000}`"
+                :to="`/block/${Number(base.latest?.block?.header.height||0) + 10000}`"
                 >{{ $t('block.future') }}</RouterLink>
             <a class="tab text-gray-400 uppercase" :class="{ 'tab-active': tab === 'transactions' }"
                 @click="tab = 'transactions'">{{ $t('account.transactions') }}</a>
@@ -31,7 +30,7 @@ const list = computed(() => {
 
             <RouterLink v-for="item in list"
                 class="flex flex-col justify-between rounded p-4 shadow bg-base-100"
-                :to="`/${chain}/block/${item.block.header.height}`">
+                :to="`/block/${item.block.header.height}`">
                 <div class="flex justify-between">
                     <h3 class="text-md font-bold sm:!text-lg">
                         {{ item.block.header.height }}
@@ -62,10 +61,10 @@ const list = computed(() => {
                 <tbody>
                     <tr v-for="(item, index) in base.txsInRecents" :index="index" class="hover">
                         <td class="text-sm text-primary">
-                            <RouterLink :to="`/${props.chain}/block/${item.height}`">{{ item.height }}</RouterLink>
+                            <RouterLink :to="`/block/${item.height}`">{{ item.height }}</RouterLink>
                         </td>
                         <td class="truncate text-primary" width="50%">
-                            <RouterLink :to="`/${props.chain}/tx/${item.hash}`">{{
+                            <RouterLink :to="`/tx/${item.hash}`">{{
                                 item.hash
                             }}</RouterLink>
                         </td>
