@@ -6,7 +6,7 @@ import type { Tx, TxResponse } from '@/types';
 import JsonPretty from 'vue-json-pretty';
 import 'vue-json-pretty/lib/styles.css';
 
-const props = defineProps(['hash', 'chain']);
+const props = defineProps(['hash']);
 
 const blockchain = useBlockchain();
 const format = useFormatter();
