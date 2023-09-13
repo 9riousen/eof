@@ -4,7 +4,6 @@ import { useBaseStore, useBlockchain, useFormatter } from '@/stores';
 import { PageRequest, type AuthAccount, type Pagination } from '@/types';
 import { onMounted } from 'vue';
 import PaginationBar from '@/components/PaginationBar.vue';
-const props = defineProps(['chain']);
 
 const chainStore = useBlockchain()
 
@@ -66,7 +65,7 @@ function showPubkey(v: any) {
             </thead>
             <tr v-for="acc in accounts">
                 <td>{{ showType(acc['@type']) }}</td>
-                <td><RouterLink :to="`/${chain}/account/${showAddress(acc)}`">{{ showAddress(acc) }}</RouterLink></td>
+                <td><RouterLink :to="`/account/${showAddress(acc)}`">{{ showAddress(acc) }}</RouterLink></td>
                 <td>{{ showAccountNumber(acc) }}</td>
                 <td>{{ showSequence(acc) }}</td>
                 <td>{{ showPubkey(acc) }}</td>

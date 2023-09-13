@@ -11,7 +11,7 @@ import { useBankStore, useBlockchain, useFormatter, useTxDialog } from '@/stores
 import PaginationBar from '@/components/PaginationBar.vue';
 import { PageRequest, type PaginatedBalances } from '@/types';
 
-const props = defineProps(['code_id', 'chain']);
+const props = defineProps(['code_id']);
 
 const pageRequest = ref(new PageRequest());
 const response = ref({} as PaginabledContracts);

@@ -5,7 +5,7 @@ import { fromBase64, toHex } from '@cosmjs/encoding';
 import { onMounted, ref } from 'vue';
 import { computed } from 'vue';
 
-const props = defineProps(['hash', 'chain']);
+const props = defineProps(['hash']);
 const blockchain = useBlockchain();
 const base = useBaseStore();
 const nodeInfo = ref({} as NodeInfo);

@@ -6,7 +6,7 @@ import type { Tx, TxResponse } from '@/types';
 import JsonPretty from 'vue-json-pretty';
 import 'vue-json-pretty/lib/styles.css';
 
-const props = defineProps(['hash', 'chain']);
+const props = defineProps(['hash']);
 
 const blockchain = useBlockchain();
 const format = useFormatter();
@@ -37,7 +37,7 @@ const messages = computed(() => {
                         <tr>
                             <td>{{ $t('account.height') }}</td>
                             <td>
-                                <RouterLink :to="`/${props.chain}/block/${tx.tx_response.height}`" class="text-primary dark:invert">{{ tx.tx_response.height
+                                <RouterLink :to="`/block/${tx.tx_response.height}`" class="text-primary dark:invert">{{ tx.tx_response.height
                                 }}
                                 </RouterLink>
                             </td>

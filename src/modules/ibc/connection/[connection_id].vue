@@ -8,7 +8,7 @@ import { useIBCModule } from '../connStore';
 import PaginationBar from '@/components/PaginationBar.vue';
 import { Icon } from '@iconify/vue';
 
-const props = defineProps(['chain', 'connection_id']);
+const props = defineProps(['connection_id']);
 const chainStore = useBlockchain();
 const baseStore = useBaseStore();
 const format = useFormatter();

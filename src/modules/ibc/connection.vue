@@ -10,7 +10,6 @@ import type { IBCPath } from '@ping-pub/chain-registry-client/dist/types';
 import router from '@/router';
 import { useIBCModule } from './connStore';
 
-const props = defineProps(['chain']);
 const chainStore = useBlockchain();
 const ibcStore = useIBCModule()
 const list = ref([] as Connection[]);

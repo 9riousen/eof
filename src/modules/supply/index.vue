@@ -33,7 +33,7 @@ function pageload(p: number) {
 </script>
 <template>
     <div class="overflow-auto">
-        <table class="table table-compact">
+        <table class="table table-compact bg-white">
             <thead>
                 <tr>
                     <td>Token</td>

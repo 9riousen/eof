@@ -31,7 +31,7 @@ const chain = useBlockchain();
       <tbody class="text-sm">
         <tr v-for="item in txs">
           <td>
-            <RouterLink :to="`/${chain.chainName}/tx/${item.hash}`" class="text-primary dark:invert">{{
+            <RouterLink :to="`/tx/${item.hash}`" class="text-primary dark:invert">{{
               item.hash
             }}</RouterLink>
           </td>

@@ -11,8 +11,6 @@ import UptimeBar from '@/components/UptimeBar.vue';
 import type { Commit, SlashingParam, SigningInfo } from '@/types';
 import { consensusPubkeyToHexAddress, valconsToBase64 } from '@/libs';
 
-const props = defineProps(['chain']);
-
 const stakingStore = useStakingStore();
 const format = useFormatter();
 const baseStore = useBaseStore();
@@ -130,7 +128,7 @@ function changeTab(v: string) {
         @click="changeTab('2')"
         >{{ $t('module.blocks') }}</a
       >
-      <RouterLink :to="`/${chain}/uptime/customize`">
+      <RouterLink :to="`/uptime/customize`">
         <a class="tab text-gray-400 capitalize">{{ $t('uptime.customize') }}</a>
       </RouterLink>
     </div>

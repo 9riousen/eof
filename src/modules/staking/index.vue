@@ -334,7 +334,7 @@ loadAvatars();
                                         <span class="text-sm text-primary dark:invert whitespace-nowrap overflow-hidden">
                                             <RouterLink
                                                 :to="{
-                                                    name: 'chain-staking-validator',
+                                                    name: 'staking-validator',
                                                     params: {
                                                         validator:
                                                             v.operator_address,
