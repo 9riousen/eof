@@ -17,7 +17,7 @@ import {
 } from '@/libs';
 import type { Coin, Delegation, PaginatedTxs, Validator } from '@/types';
 
-const props = defineProps(['validator', 'chain']);
+const props = defineProps(['validator']);
 
 const staking = useStakingStore();
 const blockchain = useBlockchain();
@@ -402,7 +402,7 @@ const tipMsg = computed(() => {
               </div>
             <RouterLink
               class="text-xs text-primary"
-              :to="`/${chain}/account/${addresses.account}`"
+              :to="`/account/${addresses.account}`"
             >
               {{ addresses.account }}
             </RouterLink>
@@ -470,12 +470,12 @@ const tipMsg = computed(() => {
           <tbody>
             <tr v-for="(item, i) in txs.tx_responses">
               <td class="text-sm text-primary">
-                <RouterLink :to="`/${props.chain}/block/${item.height}`">{{
+                <RouterLink :to="`/block/${item.height}`">{{
                   item.height
                 }}</RouterLink>
               </td>
               <td class="truncate text-primary" style="max-width: 200px">
-                <RouterLink :to="`/${props.chain}/tx/${item.txhash}`">
+                <RouterLink :to="`/tx/${item.txhash}`">
                   {{ item.txhash }}
                 </RouterLink>
               </td>
