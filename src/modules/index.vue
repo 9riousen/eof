@@ -400,12 +400,3 @@ const amount = computed({
     </div>
   </div>
 </template>
-
-<route>
-  {
-    meta: {
-      i18n: 'dashboard',
-      order: 1,
-    }
-  }
-</route>
