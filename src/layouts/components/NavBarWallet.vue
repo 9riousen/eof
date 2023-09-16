@@ -56,10 +56,10 @@ const tipMsg = computed(() => {
         </a>
         <div class="divider mt-1 mb-1"></div>
         <RouterLink to="/wallet/accounts">
-          <div class="block py-2 px-2 hover:!bg-gray-100 rounded cursor-pointer">Accounts</div>
+          <div class="block py-2 px-2 hover:!bg-gray-100 rounded cursor-pointer text-primary">Accounts</div>
         </RouterLink>
         <RouterLink to="/wallet/portfolio">
-          <div class="block py-2 px-2 hover:!bg-gray-100 rounded cursor-pointer">Portfolio</div>
+          <div class="block py-2 px-2 hover:!bg-gray-100 rounded cursor-pointer text-primary">Portfolio</div>
         </RouterLink>
         <div v-if="walletStore.currentAddress" class="divider mt-1 mb-1"></div>
         <a v-if="walletStore.currentAddress"
