@@ -298,15 +298,12 @@ async function update() {
 
     <!-- alert-info -->
     <div
-      class="text-[#00cfe8] bg-[rgba(0,207,232,0.12)] rounded shadow mt-4 alert-info"
+      class="bg-base-100 rounded mt-4"
     >
-      <div
-        class="drop-shadow-md px-4 pt-2 pb-2"
-        style="box-shadow: rgba(0, 207, 232, 0.4) 0px 6px 15px -7px"
-      >
-        <h2 class="text-base font-semibold">{{ $t('consensus.tips') }}</h2>
+      <div class="px-4 pt-2 pb-2">
+        <h2>{{ $t('consensus.tips') }}</h2>
       </div>
-      <div class="px-4 py-4">
+      <div class="p-4">
         <ul style="list-style-type: disc" class="pl-8">
           <li>
             {{ $t('consensus.tips_description_1') }}

@@ -32,11 +32,10 @@ function page(p: number) {
 </script>
 <template>
     <div>
-        <div class="tabs tabs-boxed bg-transparent mb-4 text-center">
-            <a class="tab text-gray-400 uppercase" :class="{ 'tab-active': tab === '2' }" @click="changeTab('2')">{{ $t('gov.voting') }}</a>
-            <a class="tab text-gray-400 uppercase" :class="{ 'tab-active': tab === '3' }" @click="changeTab('3')">{{ $t('gov.passed') }}</a>
-            <a class="tab text-gray-400 uppercase" :class="{ 'tab-active': tab === '4' }"
-                @click="changeTab('4')">{{ $t('gov.rejected') }}</a>
+        <div class="tabs mb-4 text-center">
+            <a class="tab tab-bordered" :class="{ 'tab-active': tab === '2'}" @click="changeTab('2')">{{ $t('gov.voting') }}</a>
+            <a class="tab tab-bordered" :class="{ 'tab-active': tab === '3'}" @click="changeTab('3')">{{ $t('gov.passed') }}</a>
+            <a class="tab tab-bordered" :class="{ 'tab-active': tab === '4'}" @click="changeTab('4')">{{ $t('gov.rejected') }}</a>
         </div>
         <ProposalListItem :proposals="store?.proposals[tab]" />
         <PaginationBar :total="store?.proposals[tab]?.pagination?.total" :limit="pageRequest.limit" :callback="page" />

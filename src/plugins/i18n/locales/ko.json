@@ -75,10 +75,10 @@
     "average_block_time": "Average Block Time",
     "block_header": "Block Header",
     "last_commit": "Last Commit",
-    "recent": "최근",
-    "future": "Future",
-    "fees": "Fees",
-    "only_tx": "Only show txs in recent blocks"
+    "recent": "최근 블록",
+    "future": "미래",
+    "fees": "가스피(fee)",
+    "only_tx": "최근 블록의 트랜잭션만 표시됩니다"
   },
   "consensus": {
     "monitor": "Monitor",

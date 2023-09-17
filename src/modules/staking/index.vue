@@ -239,21 +239,21 @@ loadAvatars();
 
     <div>
         <div class="flex items-center justify-between py-1">
-            <div class="tabs tabs-boxed bg-transparent">
+            <div class="tabs mb-4">
                 <a
-                    class="tab text-gray-400"
-                    :class="{ 'tab-active': tab === 'featured' }"
+                    class="tab tab-bordered"
+                    :class="{ 'tab-active': tab === 'featured',  }"
                     @click="tab = 'featured'"
                     >{{ $t('staking.popular') }}</a
                 >
                 <a
-                    class="tab text-gray-400"
+                    class="tab tab-bordered"
                     :class="{ 'tab-active': tab === 'active' }"
                     @click="tab = 'active'"
                     >{{ $t('staking.active') }}</a
                 >
                 <a
-                    class="tab text-gray-400"
+                    class="tab tab-bordered"
                     :class="{ 'tab-active': tab === 'inactive' }"
                     @click="tab = 'inactive'"
                     >{{ $t('staking.inactive') }}</a
