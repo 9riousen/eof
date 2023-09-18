@@ -140,7 +140,7 @@ const amount = computed({
               coinInfo.symbol
             }}</span>)
             <a href="https://coingecko.com/en/coins/fnsa">
-              <div class="badge text-xs badge-error bg-[#fcebea]">#{{ coinInfo.market_cap_rank }}</div>
+              <div class="badge bg-primary text-white">#{{ coinInfo.market_cap_rank }}</div>
             </a>
           </div>
 
@@ -158,7 +158,7 @@ const amount = computed({
                 <div
                   class="bg-gray-100 flex items-center justify-between px-4 py-2 cursor-pointer rounded">
                   <div>
-                    <div class="font-semibold text-xl text-[#666]">
+                    <div class="font-semibold text-xl">
                       {{ ticker?.market?.name || '' }}
                     </div>
                     <div class="text-info text-sm">
@@ -169,7 +169,7 @@ const amount = computed({
                   </div>
 
                   <div class="text-right">
-                    <div class="text-xl font-semibold text-[#666] dark:text-white">
+                    <div class="text-xl font-semibold text-[#666]">
                       ${{ ticker.converted_last.usd }}
                     </div>
                     <div class="text-sm" :class="store.priceColor">
@@ -250,12 +250,6 @@ const amount = computed({
       <div class="h-[1px] w-full bg-gray-100"></div>
       <div class="max-h-[250px] overflow-auto p-4 text-sm">
         <MdEditor :model-value="fnsaDesc" previewOnly></MdEditor>
-      </div>
-      <div class="mx-4 flex flex-wrap items-center">
-        <div v-for="tag in coinInfo.categories"
-          class="mr-2 mb-4 text-xs bg-gray-100 px-3 rounded-full py-1">
-          {{ tag }}
-        </div>
       </div>
     </div>
 
@@ -371,14 +365,6 @@ const amount = computed({
         <ping-token-convert :chain-name="blockchain?.current?.prettyName" :endpoint="blockchain?.endpoint?.address"
           :hd-path="walletStore?.connectedWallet?.hdPath"></ping-token-convert>
       </Teleport>
-    </div>
-
-    <div v-if="!store.coingeckoId" class="bg-base-100 rounded mt-4">
-      <div class="px-4 pt-4 pb-2 text-lg font-semibold text-main">
-        {{ $t('index.node_info') }}
-      </div>
-      <ArrayObjectElement :value="paramStore.nodeVersion?.items" :thead="false" />      
-      <div class="h-4"></div>
     </div>
   </div>
 </template>
