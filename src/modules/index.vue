@@ -65,24 +65,24 @@ function shortName(name: string, id: string) {
 
 const comLinks = [
   {
-    name: 'Website',
+    name: '웹페이지',
     icon: 'mdi-web',
-    href: store.homepage,
+    href: 'https://www.finschia.network',
   },
   {
-    name: 'Twitter',
+    name: 'X',
     icon: 'mdi-twitter',
-    href: store.twitter,
+    href: 'https://twitter.com/finschia',
   },
   {
-    name: 'Telegram',
-    icon: 'mdi-telegram',
-    href: store.telegram,
+    name: '미디움',
+    icon: 'mdi-medium',
+    href: 'https://finschia.medium.com',
   },
   {
     name: 'Github',
     icon: 'mdi-github',
-    href: store.github,
+    href: 'https://github.com/Finschia',
   },
 ];
 
