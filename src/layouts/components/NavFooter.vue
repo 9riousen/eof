@@ -26,12 +26,6 @@
         target="noopener noreferrer"
         >License</a
       >
-      <a
-        class="no-underline"
-        href="https://github.com/ping-pub/explorer"
-        target="noopener noreferrer"
-        >Github</a
-      >
     </div>
   </footer>
 </template>

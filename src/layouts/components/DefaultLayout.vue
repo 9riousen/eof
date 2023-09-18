@@ -182,20 +182,29 @@ function selected(route: any, nav: NavLink) {
         </a>
 
         <a
+          href="https://github.com/9riousen/eof"
+          target="_blank"
+          class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 hover:text-primary"
+        >
+          <Icon icon="mdi:github" class="text-xl mr-2" />
+          <div class="text-base flex-1">GitHub (EOF)</div>
+        </a>
+        <a
+          href="https://github.com/ping-pub/explorer"
+          target="_blank"
+          class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 hover:text-primary"
+        >
+          <Icon icon="mdi:github" class="text-xl mr-2" />
+          <div class="text-base flex-1">GitHub (ping-pub)</div>
+        </a>
+
+        <a
           href="https://discord.gg/finschia"
           target="_blank"
           class="py-2 px-4 flex items-center rounded-lg cursor-pointer hover:bg-gray-100 hover:text-primary"
         >
           <Icon icon="mdi:discord" class="text-xl mr-2" />
-          <div class="text-base capitalize flex-1">Discord</div>
-        </a>
-        <a
-          href="https://github.com/ping-pub/explorer/discussions"
-          target="_blank"
-          class="py-2 px-4 flex items-center rounded-lg cursor-pointer hover:bg-gray-100 hover:text-primary"
-        >
-          <Icon icon="mdi:frequently-asked-questions" class="text-xl mr-2" />
-          <div class="text-base capitalize flex-1">FAQ</div>
+          <div class="text-base capitalize flex-1">Discord (핀시아)</div>
         </a>
       </div>
     </div>

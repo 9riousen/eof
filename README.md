@@ -1,4 +1,4 @@
-# finpub
+# 핀샤의눈 - EOF(Eye Of Finschia)
 
 ![finschia](https://assets.coingecko.com/coins/images/6450/large/FINSCHIA_coin_icon%28black%29.png?1685058330)
 
@@ -14,4 +14,4 @@
 
 ## Contact
 
-💌 [9riousen@gmail.com](mailto:9riousen@gmail.com)
+💌 [김택배 9riousen@gmail.com](mailto:9riousen@gmail.com)
