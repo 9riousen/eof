@@ -31,6 +31,12 @@ const paramStore = useParamStore()
 const coinInfo = computed(() => {
   return store.coinInfo;
 });
+const fnsaDesc = `
+FNSA는 글로벌 생태계 확장을 위해 핀시아 재단에서 발행되고 핀시아 생태계에서 사용되는 베이스 코인입니다.
+2억명 이상이 사용하는 글로벌 메신저 플랫폼 LINE에서 제공하는 LINE Blockchain의 기조를 이어 글로벌 No.1 Web3 프로젝트로서 블록체인 대중화를 실현합니다.
+투자자 중심의 불균형적인 토큰 이코노미가 사용자 중심이 될 수 있도록 보완하여 누구나 참여할 수 있는 서비스 지향적 생태계를 구축합니다.
+FNSA는 FNSA를 예치하고 블록 생성/검증에 참여한 밸리데이터와 사용자들에게 분배되는 네트워크 기여 보상, FNSA 결제/사용을 촉진시키는 서비스 기여 보상, 생태계 활성화를 위한 리저브로 사용됩니다
+`;
 
 onMounted(() => {
   store.loadDashboard();
@@ -133,17 +139,14 @@ const amount = computed({
             {{ coinInfo.name }} (<span class="uppercase">{{
               coinInfo.symbol
             }}</span>)
-          </div>
-          <div class="text-xs mt-2">
-            {{ $t('index.rank') }}:
-            <div class="badge text-xs badge-error bg-[#fcebea] dark:bg-[#41384d] text-red-400">
-              #{{ coinInfo.market_cap_rank }}
-            </div>
+            <a href="https://coingecko.com/en/coins/fnsa">
+              <div class="badge text-xs badge-error bg-[#fcebea]">#{{ coinInfo.market_cap_rank }}</div>
+            </a>
           </div>
 
           <div class="my-4 flex flex-wrap items-center">
             <a v-for="(item, index) of comLinks" :key="index" :href="item.href"
-              class="link link-primary px-2 py-1 rounded-sm no-underline hover:text-primary hover:bg-gray-100 dark:hover:bg-slate-800 flex items-center">
+              class="link link-primary px-2 py-1 rounded-sm no-underline hover:text-primary hover:bg-gray-100 flex items-center">
               <Icon :icon="item?.icon" />
               <span class="ml-1 text-sm uppercase">{{ item?.name }}</span>
             </a>
@@ -153,9 +156,9 @@ const amount = computed({
             <div class="dropdown dropdown-hover w-full">
               <label>
                 <div
-                  class="bg-gray-100 dark:bg-[#384059] flex items-center justify-between px-4 py-2 cursor-pointer rounded">
+                  class="bg-gray-100 flex items-center justify-between px-4 py-2 cursor-pointer rounded">
                   <div>
-                    <div class="font-semibold text-xl text-[#666] dark:text-white">
+                    <div class="font-semibold text-xl text-[#666]">
                       {{ ticker?.market?.name || '' }}
                     </div>
                     <div class="text-info text-sm">
@@ -244,13 +247,13 @@ const amount = computed({
           <PriceMarketChart />
         </div>
       </div>
-      <div class="h-[1px] w-full bg-gray-100 dark:bg-[#384059]"></div>
+      <div class="h-[1px] w-full bg-gray-100"></div>
       <div class="max-h-[250px] overflow-auto p-4 text-sm">
-        <MdEditor :model-value="coinInfo.description?.en" previewOnly></MdEditor>
+        <MdEditor :model-value="fnsaDesc" previewOnly></MdEditor>
       </div>
       <div class="mx-4 flex flex-wrap items-center">
         <div v-for="tag in coinInfo.categories"
-          class="mr-2 mb-4 text-xs bg-gray-100 dark:bg-[#384059] px-3 rounded-full py-1">
+          class="mr-2 mb-4 text-xs bg-gray-100 px-3 rounded-full py-1">
           {{ tag }}
         </div>
       </div>
@@ -259,18 +262,6 @@ const amount = computed({
     <div class="grid grid-cols-1 gap-4 md:!grid-cols-3 lg:!grid-cols-6">
       <div v-for="(item, key) in store.stats" :key="key">
         <CardStatisticsVertical v-bind="item" />
-      </div>
-    </div>
-
-    <div v-if="blockchain.supportModule('governance')" class="bg-base-100 rounded mt-4 shadow">
-      <div class="px-4 pt-4 pb-2 text-lg font-semibold text-main">
-        {{ $t('index.active_proposals') }}
-      </div>
-      <div class="px-4 pb-4">
-        <ProposalListItem :proposals="store?.proposals" />
-      </div>
-      <div class="pb-8 text-center" v-if="store.proposals?.proposals?.length === 0">
-        {{ $t('index.no_active_proposals') }}
       </div>
     </div>
 
@@ -380,15 +371,6 @@ const amount = computed({
         <ping-token-convert :chain-name="blockchain?.current?.prettyName" :endpoint="blockchain?.endpoint?.address"
           :hd-path="walletStore?.connectedWallet?.hdPath"></ping-token-convert>
       </Teleport>
-    </div>
-
-    <div class="bg-base-100 rounded mt-4">
-      <div class="px-4 pt-4 pb-2 text-lg font-semibold text-main">
-        {{ $t('index.app_versions') }}
-      </div>
-      <!-- Application Version -->
-      <ArrayObjectElement :value="paramStore.appVersion?.items" :thead="false" />
-      <div class="h-4"></div>
     </div>
 
     <div v-if="!store.coingeckoId" class="bg-base-100 rounded mt-4">

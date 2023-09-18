@@ -150,29 +150,25 @@ export const useIndexModule = defineStore('module-index', {
 
       return [
         {
-          title: 'Height',
-          color: 'primary',
+          title: '블록높이',
           icon: 'mdi-pound',
           stats: String(base?.latest?.block?.header?.height || 0),
           change: 0,
         },
         {
-          title: 'Validators',
-          color: 'error',
+          title: '검증인',
           icon: 'mdi-human-queue',
           stats: String(base?.latest?.block?.last_commit?.signatures.length || 0),
           change: 0,
         },
         {
-          title: 'Supply',
-          color: 'success',
+          title: '공급량(cony)',
           icon: 'mdi-currency-usd',
           stats: formatter.formatTokenAmount(bank.supply),
           change: 0,
         },
         {
-          title: 'Bonded Tokens',
-          color: 'warning',
+          title: '스테이킹 예치량(cony)',
           icon: 'mdi-lock',
           stats: formatter.formatTokenAmount({
             // @ts-ignore
@@ -182,15 +178,13 @@ export const useIndexModule = defineStore('module-index', {
           change: 0,
         },
         {
-          title: 'Inflation',
-          color: 'success',
+          title: '인플레이션',
           icon: 'mdi-chart-multiple',
           stats: formatter.formatDecimalToPercent(mintStore.inflation),
           change: 0,
         },
         {
-          title: 'Community Pool',
-          color: 'primary',
+          title: '커뮤니티 풀',
           icon: 'mdi-bank',
           stats: formatter.formatTokens(
             // @ts-ignore
