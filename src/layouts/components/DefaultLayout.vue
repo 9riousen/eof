@@ -165,13 +165,22 @@ function selected(route: any, nav: NavLink) {
 
         <div class="px-4 text-sm pt-2 pb-2 uppercase">{{ $t('module.links') }}</div>
         <a
+          href="https://twitter.com/9riousen"
+          target="_blank"
+          class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 hover:text-primary"
+        >
+          <Icon icon="mdi:twitter" class="text-xl mr-2" />
+          <div class="text-base capitalize flex-1">X (김택배)</div>
+        </a>
+        <a
           href="https://twitter.com/finschia"
           target="_blank"
           class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 hover:text-primary"
         >
           <Icon icon="mdi:twitter" class="text-xl mr-2" />
-          <div class="text-base capitalize flex-1">Twitter</div>
+          <div class="text-base capitalize flex-1">X (핀시아)</div>
         </a>
+
         <a
           href="https://discord.gg/finschia"
           target="_blank"
