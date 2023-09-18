@@ -45,19 +45,19 @@ export const useParamStore = defineStore('paramstore', {
       ],
     },
     mint: {
-      title: 'Mint Parameters',
+      title: '발행(Mint) 인자',
       items: [] as Array<any>,
     },
     staking: {
-      title: 'Staking Parameters',
+      title: '스테이킹 인자',
       items: [] as Array<any>,
     },
     distribution: {
-      title: 'Distribution Parameters',
+      title: '분배(Distribution) 인자',
       items: [] as Array<any>,
     },
     slashing: {
-      title: 'Slashing Parameters',
+      title: '차감(Slashing) 인자',
       items: [] as Array<any>,
     },
     gov: {
@@ -65,11 +65,11 @@ export const useParamStore = defineStore('paramstore', {
       items: [] as Array<any>,
     },
     appVersion: {
-      title: 'Application Version',
+      title: '앱 버젼',
       items: {},
     },
     nodeVersion: {
-      title: 'Node Information',
+      title: '노드 정보',
       items: {},
     },
   }),
@@ -94,7 +94,7 @@ export const useParamStore = defineStore('paramstore', {
         const height = this.chain.items.findIndex(
           (x) => x.subtitle === 'height'
         );
-        this.chain.title = `Chain ID: ${res.block.header.chain_id}`;
+        this.chain.title = `체인 ID: ${res.block.header.chain_id}`;
         this.chain.items[height].value = res.block.header.height;
         // if (timeIn(res.block.header.time, 3, 'm')) {
         //   this.syncing = true

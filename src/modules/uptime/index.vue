@@ -141,7 +141,7 @@ function changeTab(v: string) {
         <input
           type="text"
           v-model="keyword"
-          placeholder="Keywords to filter validators"
+          placeholder="필터링 키워드"
           class="input input-sm w-full flex-1 border border-gray-200 dark:border-gray-600"
         />
       </div>
