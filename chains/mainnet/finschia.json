@@ -12,8 +12,8 @@
     "addr_prefix": "link",
     "logo": "https://assets.coingecko.com/coins/images/6450/large/FINSCHIA_coin_icon%28black%29.png",
     "assets": [{
-        "base": "ucony",
-        "symbol": "CONY",
+        "base": "cony",
+        "symbol": "FNSA",
         "exponent": "6",
         "coingecko_id": "link", 
         "logo": "https://assets.coingecko.com/coins/images/6450/large/FINSCHIA_coin_icon%28black%29.png"
