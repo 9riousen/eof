@@ -1,7 +1,7 @@
 {
     "chain_name": "Finschia",
     "api": [
-        {"provider": "scan", "address": "https://lbs-finschianw.line-apps.com"}
+        {"provider": "scan", "address": "https://dsvt-finschia.line-apps.com"}
     ],
     "rpc": [
         {"provider": "vault", "address": "https://dsvt-finschia-api.line-apps.com"}
