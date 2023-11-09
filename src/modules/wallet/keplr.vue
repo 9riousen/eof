@@ -91,7 +91,7 @@ function suggest() {
                     {{ c.chainName }}
                 </option>
             </select>
-            <button class="btn px-10 bg-primary" @click="suggest">Add {{ selected.chainName }} TO Keplr Wallet</button>
+            <button class="btn px-10 bg-primary" @click="suggest">Keplr에 {{ selected.chainName }} 추가하기</button>
         </div>
         <div class="text-main mt-5">
             <textarea v-model="conf" class="textarea textarea-bordered w-full" rows="15"></textarea>

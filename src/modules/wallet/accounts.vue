@@ -352,7 +352,7 @@ async function loadBalances(endpoint: string, address: string) {
           Import Address
         </a>
         <RouterLink to="/wallet/keplr">
-          <span class="btn btn-link">Add chain to Keplr</span>
+          <span class="btn btn-link">Keplr에 체인 추가</span>
         </RouterLink>
       </div>
     </div>
