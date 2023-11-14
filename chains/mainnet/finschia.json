@@ -17,5 +17,6 @@
         "exponent": "6",
         "coingecko_id": "link", 
         "logo": "https://assets.coingecko.com/coins/images/6450/large/FINSCHIA_coin_icon%28black%29.png"
-    }]
+    }],
+    "keplr_features": ["cosmwasm"]
 }
