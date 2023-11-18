@@ -1,19 +1,19 @@
 {
-    "chain_name": "Finschia",
+    "chain_name": "Ebony",
     "api": [
-        {"provider": "scan", "address": "https://dsvt-finschia.line-apps.com"}
+        {"provider": "Finschia", "address": "https://ebony-api.finschia.io"}
     ],
     "rpc": [
-        {"provider": "vault", "address": "https://dsvt-finschia-api.line-apps.com"}
+        {"provider": "Finschia", "address": "https://ebony-rpc.finschia.io"}
     ],
     "sdk_version": "0.47.0",
     "coin_type": "438",
     "min_tx_fee": null,
-    "addr_prefix": "link",
+    "addr_prefix": "tlink",
     "logo": "https://assets.coingecko.com/coins/images/6450/large/FINSCHIA_coin_icon%28black%29.png",
     "assets": [{
-        "base": "cony",
-        "symbol": "FNSA",
+        "base": "tcony",
+        "symbol": "TFNSA",
         "exponent": "6",
         "coingecko_id": "link", 
         "logo": "https://assets.coingecko.com/coins/images/6450/large/FINSCHIA_coin_icon%28black%29.png"

@@ -1,8 +1,15 @@
-# 핀샤의눈 - EOF(Eye Of Finschia)
+# 에보니의 눈 - EOE(Eye Of Ebony)
 
-![finschia](https://assets.coingecko.com/coins/images/6450/large/FINSCHIA_coin_icon%28black%29.png?1685058330)
+![Finschia](https://assets.coingecko.com/coins/images/6450/large/FINSCHIA_coin_icon%28black%29.png?1685058330)
 
-[finschia](https://finschia.network)용 [ping.pub](https://ping.pub)
+[Finschia](https://finschia.network)용 [ping.pub](https://ping.pub)
+
+## 실행하기
+
+```bash
+yarn install
+yarn dev
+```
 
 ## 참고자료
 
@@ -11,6 +18,7 @@
 - [SLIP-0044:Registered coin types for BIP-0044](https://github.com/satoshilabs/slips/blob/master/slip-0044.md)
 - [CoinGecko FINSCHIA](https://www.coingecko.com/en/coins/fnsa)
 - [DOSI Vault](https://vault.dosi.world)
+- [노드와 통신하기|Finschia Docs](https://docs.finschia.network/ko/node-management/interaction-with-finschia/overview#public-application-node)
 
 ## Contact
 
