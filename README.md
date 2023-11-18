@@ -11,6 +11,13 @@ yarn install
 yarn dev
 ```
 
+## 빌드하기
+
+```zsh
+yarn install
+yarn build  # dist/ folder 
+```
+
 ## 참고자료
 
 - [LINE Blockchain Scan - Github](https://github.com/line/line-blockchain-scan)
