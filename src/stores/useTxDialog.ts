@@ -56,7 +56,7 @@ export const useTxDialog = defineStore('txDialogStore', {
       }
     }) {
       console.log(tx.detail)
-      if (tx.detail && tx.detail.hash) router.push({ path: `/${this.blockchain.chainName}/tx/${tx.detail.hash}` })
+      if (tx.detail && tx.detail.hash) router.push({ path: `/tx/${tx.detail.hash}` })
     },
     confirmed(tx: any) {
       console.log("confirmed:", tx)
