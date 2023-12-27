@@ -63,7 +63,7 @@ const proposalInfo = ref();
               </RouterLink>
               <div
                 v-if="item.content"
-                class="bg-[#f6f2ff] text-[#9c6cff] dark:bg-gray-600 dark:text-gray-300 inline-block rounded-full px-2 py-[1px] text-xs mb-1"
+                class="bg-[#f6f2ff] text-[#9c6cff] inline-block rounded-full px-2 py-[1px] text-xs mb-1"
               >
                 {{ showType(item.content['@type']) }}
               </div>
@@ -102,7 +102,7 @@ const proposalInfo = ref();
                 </div>
               </div>
               <div
-                class="truncate col-span-2 md:!col-span-1 text-xs text-gray-500 dark:text-gray-400 text-right md:!flex md:!justify-start"
+                class="truncate col-span-2 md:!col-span-1 text-xs text-gray-500 text-right md:!flex md:!justify-start"
               >
                 {{ format.toDay(item.voting_end_time, 'from') }}
               </div>
@@ -159,14 +159,14 @@ const proposalInfo = ref();
           <div class="col-span-2">
             <div
               v-if="item.content"
-              class="bg-[#f6f2ff] text-[#9c6cff] dark:bg-gray-600 dark:text-gray-300 inline-block rounded-full px-2 py-[1px] text-xs mb-1"
+              class="bg-[#f6f2ff] text-[#9c6cff] inline-block rounded-full px-2 py-[1px] text-xs mb-1"
             >
               {{ showType(item.content['@type']) }}
             </div>
           </div>
 
           <div
-            class="truncate text-xs text-gray-500 dark:text-gray-400 flex items-center justify-end"
+            class="truncate text-xs text-gray-500 flex items-center justify-end"
           >
             {{ format.toDay(item.voting_end_time, 'from') }}
           </div>

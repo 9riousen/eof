@@ -288,7 +288,7 @@ loadAvatars();
                         <tr
                             v-for="({v, rank, logo}, i) in list"
                             :key="v.operator_address"
-                            class="hover:bg-gray-100 dark:hover:bg-[#384059]"
+                            class="hover:bg-gray-100"
                         >
                             <!-- 👉 rank -->
                             <td>
@@ -331,7 +331,7 @@ loadAvatars();
                                     </div>
 
                                     <div class="flex flex-col">
-                                        <span class="text-sm text-primary dark:invert whitespace-nowrap overflow-hidden">
+                                        <span class="text-sm text-primary whitespace-nowrap overflow-hidden">
                                             <RouterLink
                                                 :to="{
                                                     name: 'staking-validator',

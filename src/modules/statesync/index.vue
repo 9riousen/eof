@@ -67,15 +67,15 @@ onMounted(() => {
         {{ $t('statesync.text_2_1') }}.
         <br /><br />
         <div class="mockup-code bg-base-200 my-2">
-            <pre data-prefix=">"><code class="text-gray-800 dark:invert">[state-sync]</code></pre>
-            <pre data-prefix=">"><code class="text-gray-800 dark:invert">enable = true</code></pre>
+            <pre data-prefix=">"><code class="text-gray-800">[state-sync]</code></pre>
+            <pre data-prefix=">"><code class="text-gray-800">enable = true</code></pre>
             <pre data-prefix=">"><code class="text-gray-800"></code></pre>
-            <pre data-prefix=">"><code class="text-gray-800 dark:invert">rpc_servers = "{{ rpcs }}"</code></pre>
-            <pre data-prefix=">"><code class="text-gray-800 dark:invert">trust_height = {{ height }} </code></pre>
-            <pre data-prefix=">"><code class="text-gray-800 dark:invert">trust_hash = "{{hash}}"</code></pre>
-            <pre data-prefix=">"><code class="text-gray-800 dark:invert"></code></pre>
+            <pre data-prefix=">"><code class="text-gray-800">rpc_servers = "{{ rpcs }}"</code></pre>
+            <pre data-prefix=">"><code class="text-gray-800">trust_height = {{ height }} </code></pre>
+            <pre data-prefix=">"><code class="text-gray-800">trust_hash = "{{hash}}"</code></pre>
+            <pre data-prefix=">"><code class="text-gray-800"></code></pre>
             <pre data-prefix=">"><code class="text-green-400"># 2/3 of unbonding time</code></pre>
-            <pre data-prefix=">"><code class="text-gray-800 dark:invert">trust_period = "168h"</code></pre>
+            <pre data-prefix=">"><code class="text-gray-800">trust_period = "168h"</code></pre>
         </div>
         <br />
         3. {{ $t('statesync.text_3') }}: <code class="bg-base-200 text-gray-600 px-2 py-px mx-1 rounded shadow">{{ appName }} start</code>
@@ -93,13 +93,13 @@ onMounted(() => {
         {{ $t('statesync.text_title_3') }}
         <br /><br />
         <div class="mockup-code bg-base-200 my-2">
-            <pre data-prefix=">"><code class="text-gray-800 dark:invert">[state-sync]</code></pre>
+            <pre data-prefix=">"><code class="text-gray-800">[state-sync]</code></pre>
             <pre data-prefix=">"><code class="text-green-400"># snapshot-interval specifies the block interval at which local state sync snapshots are</code></pre>
             <pre data-prefix=">"><code class="text-green-400"># taken (0 to disable). Must be a multiple of pruning-keep-every.</code></pre>
-            <pre data-prefix=">"><code class="text-gray-800 dark:invert">snapshot-interval = 1000</code></pre>
-            <pre data-prefix=">"><code class="text-gray-800 dark:invert"></code></pre>
+            <pre data-prefix=">"><code class="text-gray-800">snapshot-interval = 1000</code></pre>
+            <pre data-prefix=">"><code class="text-gray-800"></code></pre>
             <pre data-prefix=">"><code class="text-green-400"># snapshot-keep-recent specifies the number of recent snapshots to keep and serve (0 to keep all). Each snapshot is about 500MiB</code></pre>
-            <pre data-prefix=">"><code class="text-gray-800 dark:invert">snapshot-keep-recent = 2</code></pre>
+            <pre data-prefix=">"><code class="text-gray-800">snapshot-keep-recent = 2</code></pre>
         </div>
       </div>
     </div>

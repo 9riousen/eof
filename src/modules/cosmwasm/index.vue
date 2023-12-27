@@ -38,7 +38,7 @@ pageload(1)
                         <td>{{ v.code_id }}</td>
                         <td>
                             <RouterLink :to="`/cosmwasm/${v.code_id}/contracts`"
-                                class="truncate max-w-[200px] block text-primary dark:invert" :title="v.data_hash">
+                                class="truncate max-w-[200px] block text-primary" :title="v.data_hash">
                                 {{ v.data_hash }}
                             </RouterLink>
                         </td>

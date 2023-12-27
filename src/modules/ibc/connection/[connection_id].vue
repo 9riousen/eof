@@ -103,7 +103,7 @@ function color(v: string) {
               <div class="order-first text-3xl font-semibold tracking-tight text-main mb-1">
                 {{ baseStore.latest?.block?.header?.chain_id }}
               </div>
-              <div class="text-sm text-gray-500 dark:text-gray-400">
+              <div class="text-sm text-gray-500">
                 {{ conn.client_id }} {{ props.connection_id }}
               </div>
             </div>
@@ -120,7 +120,7 @@ function color(v: string) {
             <div class="order-first text-3xl font-semibold tracking-tight text-main mb-2">
               {{ clientState.client_state?.chain_id }}
             </div>
-            <div class="text-sm text-gray-500 dark:text-gray-400">
+            <div class="text-sm text-gray-500">
               {{ conn.counterparty?.connection_id }} {{ clientState.client_id }}
             </div>
           </div>
@@ -289,7 +289,7 @@ function color(v: string) {
           <tr v-for="resp in txs?.tx_responses">
             <td>{{ resp.height }}</td>
             <td>
-              <div class="text-xs truncate text-primary dark:invert">
+              <div class="text-xs truncate text-primary">
                 <RouterLink :to="`/${chainStore.chainName}/tx/${resp.txhash}`">{{ resp.txhash }}</RouterLink>
               </div>
             </td>

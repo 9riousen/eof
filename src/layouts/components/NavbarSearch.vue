@@ -67,7 +67,7 @@ function confirm() {
     >
       <Icon
         icon="mdi:magnify"
-        class="text-2xl text-gray-500 dark:text-gray-400"
+        class="text-2xl text-gray-500"
       />
     </button>
 
@@ -98,7 +98,7 @@ function confirm() {
           >
             <Icon
               icon="zondicons:close-outline"
-              class="text-2xl text-gray-500 dark:text-gray-400"
+              class="text-2xl text-gray-500"
             />
           </label>
         </div>

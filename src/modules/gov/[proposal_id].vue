@@ -223,7 +223,7 @@ function pageload(p: number) {
               }`"
             ></div>
             <p
-              class="absolute inset-x-0 inset-y-0 text-center text-sm text-[#666] dark:text-[#eee] flex items-center justify-center"
+              class="absolute inset-x-0 inset-y-0 text-center text-sm text-[#666] flex items-center justify-center"
             >
               {{ item.value }}
             </p>

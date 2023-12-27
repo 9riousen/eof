@@ -24,7 +24,7 @@ function changeEndpoint(item: Endpoint) {
             chainStore.chainName ||
             ''
           "
-          class="capitalize whitespace-nowrap text-base font-semibold text-gray-600 dark:text-gray-200 hidden md:!block"
+          class="capitalize whitespace-nowrap text-base font-semibold text-gray-600 hidden md:!block"
         >
           #{{
             baseStore.latest?.block?.header?.height ||
@@ -33,7 +33,7 @@ function changeEndpoint(item: Endpoint) {
           }}
         </div>
         <div
-          class="text-xs text-gray-500 dark:text-gray-400 whitespace-nowrap hidden md:!block"
+          class="text-xs text-gray-500 whitespace-nowrap hidden md:!block"
         >
           {{ chainStore.connErr || chainStore.endpoint.address }}
         </div>
@@ -52,13 +52,13 @@ function changeEndpoint(item: Endpoint) {
       </div>
       <div
         v-for="(item, index) in chainStore.current?.endpoints?.rest"
-        class="px-4 py-2 w-full hover:bg-gray-100 dark:hover:bg-[#384059] cursor-pointer"
+        class="px-4 py-2 w-full hover:bg-gray-100 cursor-pointer"
         :key="index"
         @click="changeEndpoint(item)"
       >
         <div class="flex flex-col">
           <div class="flex items-center justify-between w-full">
-            <div class="text-gray-500 dark:text-gray-200 capitalize">
+            <div class="text-gray-500 capitalize">
               {{ item.provider }}
             </div>
             <span

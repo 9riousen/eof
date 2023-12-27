@@ -202,10 +202,10 @@ function updateEvent() {
                 </div>
               </div>
               <div
-                class="text-xs truncate relative py-1 px-3 rounded-full w-fit text-primary dark:invert mr-2"
+                class="text-xs truncate relative py-1 px-3 rounded-full w-fit text-primary mr-2"
               >
                 <span
-                  class="inset-x-0 inset-y-0 opacity-10 absolute bg-primary dark:invert text-sm"
+                  class="inset-x-0 inset-y-0 opacity-10 absolute bg-primary text-sm"
                 ></span>
                 ${{ format.tokenValue(balanceItem) }}                
               </div>
@@ -238,10 +238,10 @@ function updateEvent() {
                 </div>
               </div>
               <div
-                class="text-xs truncate relative py-1 px-3 rounded-full w-fit text-primary dark:invert mr-2"
+                class="text-xs truncate relative py-1 px-3 rounded-full w-fit text-primary mr-2"
               >
                 <span
-                  class="inset-x-0 inset-y-0 opacity-10 absolute bg-primary dark:invert text-sm"
+                  class="inset-x-0 inset-y-0 opacity-10 absolute bg-primary text-sm"
                 ></span>
                 ${{ format.tokenValue(delegationItem?.balance) }}                
               </div>
@@ -271,10 +271,10 @@ function updateEvent() {
                 <div class="text-xs">{{ format.calculatePercent(rewardItem.amount, totalAmount) }}</div>
               </div>
               <div
-                class="text-xs truncate relative py-1 px-3 rounded-full w-fit text-primary dark:invert mr-2"
+                class="text-xs truncate relative py-1 px-3 rounded-full w-fit text-primary mr-2"
               >
                 <span
-                  class="inset-x-0 inset-y-0 opacity-10 absolute bg-primary  dark:invert text-sm"
+                  class="inset-x-0 inset-y-0 opacity-10 absolute bg-primary text-sm"
                 ></span>${{ format.tokenValue(rewardItem) }}
                 
               </div>
@@ -307,9 +307,9 @@ function updateEvent() {
                 </div>
               </div>
               <div
-                class="text-xs truncate relative py-1 px-3 rounded-full w-fit text-primary dark:invert mr-2"
+                class="text-xs truncate relative py-1 px-3 rounded-full w-fit text-primary mr-2"
               >
-                <span class="inset-x-0 inset-y-0 opacity-10 absolute bg-primary dark:invert"></span>
+                <span class="inset-x-0 inset-y-0 opacity-10 absolute bg-primary"></span>
                 ${{format.tokenValue({
                       amount: String(unbondingTotal),
                       denom: stakingStore.params.bond_denom,
@@ -509,12 +509,12 @@ function updateEvent() {
             <tr v-if="txs.length === 0"><td colspan="10"><div class="text-center">{{ $t('account.no_transactions') }}</div></td></tr>
             <tr v-for="(v, index) in txs" :key="index">
               <td class="text-sm py-3">
-                <RouterLink :to="`/block/${v.height}`" class="text-primary dark:invert">{{
+                <RouterLink :to="`/block/${v.height}`" class="text-primary">{{
                   v.height
                 }}</RouterLink>
               </td>
               <td class="truncate py-3" style="max-width: 200px">
-                <RouterLink :to="`/tx/${v.txhash}`" class="text-primary dark:invert">
+                <RouterLink :to="`/tx/${v.txhash}`" class="text-primary">
                   {{ v.txhash }}
                 </RouterLink>
               </td>

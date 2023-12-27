@@ -60,7 +60,7 @@ function selected(route: any, nav: NavLink) {
       <div class="flex justify-between mt-1 pl-4 py-4 mb-1">
         <RouterLink to="/" class="flex items-center">
           <Icon icon="pajamas:eye" class="w-10 h-10" />
-          <h1 class="flex-1 ml-3 text-2xl font-semibold dark:text-white">
+          <h1 class="flex-1 ml-3 text-2xl font-semibold">
             핀샤의눈
           </h1>
         </RouterLink>
@@ -132,7 +132,7 @@ function selected(route: any, nav: NavLink) {
             class="w-6 h-6 rounded-full mr-3 border border-blue-100"
           />
           <div
-            class="text-base capitalize flex-1 text-gray-700 dark:text-gray-200 whitespace-nowrap"
+            class="text-base capitalize flex-1 text-gray-700 whitespace-nowrap"
           >
             {{ item?.title }}
           </div>
