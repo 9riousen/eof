@@ -7,7 +7,7 @@ import type {
   PaginabledContracts,
 } from '../types';
 import DynamicComponent from '@/components/dynamic/DynamicComponent.vue';
-import { useBankStore, useBlockchain, useFormatter, useTxDialog } from '@/stores';
+import { useBankStore, useBlockchain, useFormatter } from '@/stores';
 import PaginationBar from '@/components/PaginationBar.vue';
 import { PageRequest, type PaginatedBalances } from '@/types';
 
@@ -27,7 +27,6 @@ function loadContract(pageNum: number) {
 }
 loadContract(1);
 
-const dialog = useTxDialog();
 const format = useFormatter();
 const infoDialog = ref(false);
 const info = ref({} as ContractInfo);
@@ -157,13 +156,6 @@ const result = ref('');
                 >
                 {{ $t('cosmwasm.btn_query') }}
                 </label>
-                <label
-                  for="wasm_execute_contract"
-                  class="btn btn-primary btn-xs text-xs"
-                  @click="dialog.open('wasm_execute_contract', { contract: v })"
-                >
-                {{ $t('cosmwasm.btn_execute') }}
-                </label>
               </td>
             </tr>
           </tbody>
@@ -174,16 +166,6 @@ const result = ref('');
             :total="response.pagination?.total"
             :callback="loadContract"
           />
-          <label
-            for="wasm_instantiate_contract"
-            class="btn btn-primary my-5"
-            @click="
-              dialog.open('wasm_instantiate_contract', {
-                codeId: props.code_id,
-              })
-            "
-            >{{ $t('cosmwasm.instantiate_contract') }}</label
-          >
         </div>
       </div>
     </div>

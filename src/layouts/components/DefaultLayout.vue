@@ -10,7 +10,6 @@ import ChainProfile from '@/layouts/components/ChainProfile.vue';
 import { useDashboard } from '@/stores/useDashboard';
 import { useBlockchain } from '@/stores';
 
-import NavBarWallet from './NavBarWallet.vue';
 import type { NavGroup, NavLink, NavSectionTitle, VerticalNavItems } from '../types';
 
 const dashboard = useDashboard();
@@ -225,7 +224,6 @@ function selected(route: any, nav: NavLink) {
 
         <!-- <NavSearchBar />-->
         <NavbarSearch class="!inline-block" />
-        <NavBarWallet />
       </div>
 
       <!-- 👉 Pages -->

@@ -19,7 +19,6 @@ import {
   useGovStore,
   useMintStore,
   useStakingStore,
-  useWalletStore,
 } from '.';
 import { useBlockModule } from '@/modules/block/block';
 import { DEFAULT } from '@/libs';
@@ -108,7 +107,6 @@ export const useBlockchain = defineStore('blockchain', {
   },
   actions: {
     async initial() {
-      useWalletStore().$reset();
       await this.randomSetupEndpoint();
       await useStakingStore().init();
       useBankStore().initial();

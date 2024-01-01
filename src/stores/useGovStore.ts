@@ -2,7 +2,6 @@ import { defineStore } from 'pinia';
 import { useBlockchain } from './useBlockchain';
 import type { PageRequest, PaginatedProposals } from '@/types';
 import { LoadingStatus } from './useDashboard';
-import { useWalletStore } from './useWalletStore';
 import { reactive } from 'vue';
 
 export const useGovStore = defineStore('govStore', {
@@ -20,10 +19,7 @@ export const useGovStore = defineStore('govStore', {
   getters: {
     blockchain() {
       return useBlockchain();
-    },
-    walletstore() {
-      return useWalletStore();
-    },
+    }
   },
   actions: {
     initial() {
@@ -42,25 +38,7 @@ export const useGovStore = defineStore('govStore', {
           this.fetchTally(item.proposal_id).then((res) => {
             item.final_tally_result = res?.tally;
           });
-          if (this.walletstore.currentAddress) {
-            try {
-              this.fetchProposalVotesVoter(
-                item.proposal_id,
-                this.walletstore.currentAddress
-              )
-                .then((res) => {
-                  item.voterStatus = res?.vote?.option || 'VOTE_OPTION_NO_WITH_VETO'
-                  // 'No With Veto';
-                })
-                .catch((reject) => {
-                  item.voterStatus = 'VOTE_OPTION_NO_WITH_VETO'
-                });
-            } catch (error) {
-              item.voterStatus = 'VOTE_OPTION_NO_WITH_VETO'
-            }
-          } else {
-            item.voterStatus = 'VOTE_OPTION_NO_WITH_VETO'
-          }
+          item.voterStatus = 'VOTE_OPTION_NO_WITH_VETO'
         });
       }
 

@@ -4,7 +4,6 @@ import {
   useFormatter,
   useMintStore,
   useStakingStore,
-  useTxDialog,
 } from '@/stores';
 import { onMounted, computed, ref } from 'vue';
 import { Icon } from '@iconify/vue';
@@ -22,7 +21,6 @@ const props = defineProps(['validator']);
 const staking = useStakingStore();
 const blockchain = useBlockchain();
 const format = useFormatter();
-const dialog = useTxDialog();
 
 const validator: string = props.validator;
 
@@ -185,16 +183,6 @@ const tipMsg = computed(() => {
               <div class="text-sm mb-4">
                 {{ v.description?.identity || '-' }}
               </div>
-              <label
-                for="delegate"
-                class="btn btn-primary btn-sm w-full"
-                @click="
-                  dialog.open('delegate', {
-                    validator_address: v.operator_address,
-                  })
-                "
-                >{{ $t('account.btn_delegate') }}</label
-              >
             </div>
           </div>
           <div class="m-4 text-sm">
@@ -371,18 +359,6 @@ const tipMsg = computed(() => {
             >
               {{ format.formatToken2(i) }}
             </div>
-          </div>
-          <div class="">
-            <label
-              for="withdraw_commission"
-              class="btn btn-primary w-full"
-              @click="
-                dialog.open('withdraw_commission', {
-                  validator_address: v.operator_address,
-                })
-              "
-              >{{ $t('account.btn_withdraw') }}</label
-            >
           </div>
         </div>
       </div>

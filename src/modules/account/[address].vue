@@ -3,7 +3,6 @@ import {
   useBlockchain,
   useFormatter,
   useStakingStore,
-  useTxDialog,
 } from '@/stores';
 import DynamicComponent from '@/components/dynamic/DynamicComponent.vue';
 import DonutChart from '@/components/charts/DonutChart.vue';
@@ -25,7 +24,6 @@ const props = defineProps(['address']);
 
 const blockchain = useBlockchain();
 const stakingStore = useStakingStore();
-const dialog = useTxDialog();
 const format = useFormatter();
 const account = ref({} as AuthAccount);
 const txs = ref({} as TxResponse[]);
@@ -149,28 +147,6 @@ function updateEvent() {
       <div class="flex justify-between">
         <h2 class="card-title mb-4">{{ $t('account.assets') }}</h2>
         <!-- button -->
-        <div class="flex justify-end mb-4 pr-5">
-            <label
-              for="send"
-              class="btn btn-primary btn-sm mr-2"
-              @click="dialog.open('send', {}, updateEvent)"
-              >{{ $t('account.btn_send') }}</label
-            >
-            <label
-              for="transfer"
-              class="btn btn-primary btn-sm"
-              @click="
-                dialog.open(
-                  'transfer',
-                  {
-                    chain_name: blockchain.current?.prettyName,
-                  },
-                  updateEvent
-                )
-              "
-              >{{ $t('account.btn_transfer') }}</label
-            >
-          </div>
       </div>
       <div class="grid md:!grid-cols-3">
         <div class="md:!col-span-1">
@@ -329,20 +305,6 @@ function updateEvent() {
     <div class="bg-base-100 px-4 pt-3 pb-4 rounded mb-4 shadow">
       <div class="flex justify-between">
         <h2 class="card-title mb-4">{{ $t('account.delegations') }}</h2>
-        <div class="flex justify-end mb-4">
-          <label
-            for="delegate"
-            class="btn btn-primary btn-sm mr-2"
-            @click="dialog.open('delegate', {}, updateEvent)"
-            >{{ $t('account.btn_delegate') }}</label
-          >
-          <label
-            for="withdraw"
-            class="btn btn-primary btn-sm"
-            @click="dialog.open('withdraw', {}, updateEvent)"
-            >{{ $t('account.btn_withdraw') }}</label
-          >
-        </div>
       </div>
       <div class="overflow-x-auto">
         <table class="table w-full text-sm table-zebra">
@@ -377,52 +339,6 @@ function updateEvent() {
                     )?.reward
                   )
                 }}
-              </td>
-              <td class="py-3">
-                <div v-if="v.balance" class="flex justify-end">
-                  <label
-                    for="delegate"
-                    class="btn btn-primary btn-xs mr-2"
-                    @click="
-                      dialog.open(
-                        'delegate',
-                        {
-                          validator_address: v.delegation.validator_address,
-                        },
-                        updateEvent
-                      )
-                    "
-                    >{{ $t('account.btn_delegate') }}</label
-                  >
-                  <label
-                    for="redelegate"
-                    class="btn btn-primary btn-xs mr-2"
-                    @click="
-                      dialog.open(
-                        'redelegate',
-                        {
-                          validator_address: v.delegation.validator_address,
-                        },
-                        updateEvent
-                      )
-                    "
-                    >{{ $t('account.btn_redelegate') }}</label
-                  >
-                  <label
-                    for="unbond"
-                    class="btn btn-primary btn-xs"
-                    @click="
-                      dialog.open(
-                        'unbond',
-                        {
-                          validator_address: v.delegation.validator_address,
-                        },
-                        updateEvent
-                      )
-                    "
-                    >{{ $t('account.btn_unbond') }}</label
-                  >
-                </div>
               </td>
             </tr>
           </tbody>

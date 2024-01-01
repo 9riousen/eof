@@ -7,7 +7,6 @@ import {
   useFormatter,
   useGovStore,
   useStakingStore,
-  useTxDialog,
 } from '@/stores';
 import {
   PageRequest,
@@ -26,7 +25,6 @@ const props = defineProps(['proposal_id']);
 const proposal = ref({} as GovProposal);
 const format = useFormatter();
 const store = useGovStore();
-const dialog = useTxDialog();
 const stakingStore = useStakingStore();
 
 store.fetchProposal(props.proposal_id).then((res) => {
@@ -228,20 +226,6 @@ function pageload(p: number) {
               {{ item.value }}
             </p>
           </div>
-        </div>
-        <div class="mt-6 grid grid-cols-2">
-          <label
-            for="vote"
-            class="btn btn-primary float-right btn-sm mx-1"
-            @click="dialog.open('vote', { proposal_id })"
-            >{{ $t('gov.btn_vote') }}</label
-          >
-          <label
-            for="deposit"
-            class="btn btn-primary float-right btn-sm mx-1"
-            @click="dialog.open('deposit', { proposal_id })"
-            >{{ $t('gov.btn_deposit') }}</label
-          >
         </div>
       </div>
 

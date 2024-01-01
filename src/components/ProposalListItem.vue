@@ -3,14 +3,12 @@ import {
   useBlockchain,
   useFormatter,
   useStakingStore,
-  useTxDialog,
 } from '@/stores';
 import { select } from '@/components/dynamic/index';
 import type { PaginatedProposals } from '@/types';
 import ProposalProcess from './ProposalProcess.vue';
 import type { PropType } from 'vue';
 import { ref } from 'vue';
-const dialog = useTxDialog();
 defineProps({
   proposals: { type: Object as PropType<PaginatedProposals> },
 });
@@ -108,26 +106,6 @@ const proposalInfo = ref();
               </div>
             </div>
           </td>
-
-          <td v-if="statusMap?.[item?.status] === 'VOTING'" class="w-40">
-            <div class="">
-              <label
-                for="vote"
-                class="btn btn-xs btn-primary rounded-sm"
-                @click="
-                  dialog.open('vote', {
-                    proposal_id: item?.proposal_id,
-                  })
-                "
-              >
-                <span v-if="item?.voterStatus !== 'VOTE_OPTION_NO_WITH_VETO'">{{
-                  item?.voterStatus?.replace('VOTE_OPTION_', '')
-                }}</span>
-
-                <span v-else>Vote</span>
-              </label>
-            </div>
-          </td>
         </tr>
       </tbody>
     </table>
@@ -204,23 +182,7 @@ const proposalInfo = ref();
               <div class="text-xs flex items-center">
                 {{ statusMap?.[item?.status] || item?.status }}
               </div>
-            </div>
-            <label
-              for="vote"
-              class="btn btn-xs btn-primary rounded-sm"
-              @click="
-                dialog.open('vote', {
-                  proposal_id: item?.proposal_id,
-                })
-              "
-            >
-              <span v-if="item?.voterStatus !== 'VOTE_OPTION_NO_WITH_VETO'">{{
-                item?.voterStatus?.replace('VOTE_OPTION_', '')
-              }}</span>
-
-              <span v-else>Vote</span></label
-            >
-           
+            </div>           
           </div>
         </div>
       </div>

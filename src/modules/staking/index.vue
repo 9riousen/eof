@@ -5,7 +5,6 @@ import {
     useFormatter,
     useMintStore,
     useStakingStore,
-    useTxDialog,
 } from '@/stores';
 import { computed } from '@vue/reactivity';
 import { onMounted, ref } from 'vue';
@@ -16,7 +15,6 @@ import { formatSeconds}  from '@/libs/utils'
 const staking = useStakingStore();
 const base = useBaseStore();
 const format = useFormatter();
-const dialog = useTxDialog();
 const chainStore = useBlockchain();
 const mintStore = useMintStore()
 
@@ -403,18 +401,6 @@ loadAvatars();
                                 >
                                 {{ $t('staking.jailed') }}
                                 </div>
-                                <label
-                                    v-else-if="rank !== 'error'"
-                                    for="delegate"
-                                    class="btn btn-xs btn-primary rounded-sm capitalize"
-                                    @click="
-                                        dialog.open('delegate', {
-                                            validator_address:
-                                                v.operator_address,
-                                        })
-                                    "
-                                    >{{ $t('account.btn_delegate') }}</label
-                                >
                             </td>
                         </tr>
                     </tbody>
