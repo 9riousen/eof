@@ -13,7 +13,7 @@ function walletStateChange(res: any) {
   walletStore.setConnectedWallet(res.detail?.value);
 }
 let showCopyToast = ref(0);
-async function copyAdress(address: string) {
+async function copyAddress(address: string) {
   try {
     await navigator.clipboard.writeText(address);
     showCopyToast.value = 1;
@@ -51,7 +51,7 @@ const tipMsg = computed(() => {
       <div>
         <a v-if="walletStore.currentAddress"
           class="block py-2 px-2 hover:bg-gray-100 rounded cursor-pointer"
-          style="overflow-wrap: anywhere" @click="copyAdress(walletStore.currentAddress)">
+          style="overflow-wrap: anywhere" @click="copyAddress(walletStore.currentAddress)">
           {{ walletStore.currentAddress }}
         </a>
         <div class="divider mt-1 mb-1"></div>
@@ -82,6 +82,7 @@ const tipMsg = computed(() => {
       </div>
     </div>
   </div>
+
   <Teleport to="body">
     <ping-connect-wallet :chain-id="baseStore.currentChainId" :hd-path="chainStore.defaultHDPath"
       :addr-prefix="chainStore.current?.bech32Prefix || 'cosmos'" @connect="walletStateChange"
