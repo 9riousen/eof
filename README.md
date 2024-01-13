@@ -4,6 +4,10 @@
 
 [finschia](https://finschia.network)용 [ping.pub](https://ping.pub)
 
+## yarn
+
+- `yarn` 사용 추천함. `pnpm`으로는 `build`에 실패하는데 원인 파악하기 귀찮음
+
 ## 참고자료
 
 - [LINE Blockchain Scan - Github](https://github.com/line/line-blockchain-scan)
