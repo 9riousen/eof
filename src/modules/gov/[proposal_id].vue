@@ -202,9 +202,9 @@ function pageload(p: number) {
     </div>
     <!-- grid lg:!!grid-cols-3 auto-rows-max-->
     <!-- flex-col lg:!!flex-row flex -->
-    <div class="gap-4 mb-4 grid lg:!!grid-cols-3 auto-rows-max">
+    <div class="gap-4 mb-4 flex flex-col md:flex-row">
       <!-- flex-1 -->
-      <div class="bg-base-100 px-4 pt-3 pb-4 rounded shadow">
+      <div class="bg-base-100 px-4 pt-3 pb-4 rounded md:w-1/2">
         <h2 class="card-title mb-1">{{ $t('gov.tally') }}</h2>
         <div class="mb-1" v-for="(item, index) of processList" :key="index">
           <label class="block text-sm mb-1">{{ item.name_ko }}</label>
@@ -229,7 +229,7 @@ function pageload(p: number) {
         </div>
       </div>
 
-      <div class="bg-base-100 px-4 pt-3 pb-5 rounded shadow lg:!!col-span-2">
+      <div class="bg-base-100 px-4 pt-3 pb-5 rounded md:w-1/2">
         <h2 class="card-title">{{ $t('gov.timeline') }}</h2>
 
         <div class="px-1">
