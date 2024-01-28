@@ -13,29 +13,14 @@ import { consensusPubkeyToHexAddress } from '@/libs';
 import { useBankStore } from './useBankStore';
 import type { Coin, DenomTrace } from '@/types';
 import { useDashboard } from './useDashboard';
+import 'dayjs/locale/ko';
 
 dayjs.extend(localeData);
 dayjs.extend(duration);
 dayjs.extend(relativeTime);
 dayjs.extend(updateLocale);
 dayjs.extend(utc);
-dayjs.updateLocale('en', {
-  relativeTime: {
-    future: 'in %s',
-    past: '%s ago',
-    s: '%ds',
-    m: '1m',
-    mm: '%dm',
-    h: 'an hour',
-    hh: '%d hours',
-    d: 'a day',
-    dd: '%d days',
-    M: 'a month',
-    MM: '%d months',
-    y: 'a year',
-    yy: '%d years',
-  },
-});
+dayjs.locale('ko');
 
 export const useFormatter = defineStore('formatter', {
   state: () => {
