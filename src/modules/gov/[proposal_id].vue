@@ -143,11 +143,11 @@ const abstain = computed(() => {
 });
 const processList = computed(() => {
   return [
-    { name: 'Turnout', value: turnout.value, class: 'bg-info' },
-    { name: 'Yes', value: yes.value, class: 'bg-success' },
-    { name: 'No', value: no.value, class: 'bg-error' },
-    { name: 'No With Veto', value: veto.value, class: 'bg-red-800' },
-    { name: 'Abstain', value: abstain.value, class: 'bg-warning' },
+    { name: 'Turnout', name_ko: '투표율',value: turnout.value, class: 'bg-info' },
+    { name: 'Yes', name_ko: '찬성', value: yes.value, class: 'bg-success' },
+    { name: 'No', name_ko:'반대', value: no.value, class: 'bg-error' },
+    { name: 'No With Veto', name_ko:'거부(강한반대)', value: veto.value, class: 'bg-red-800' },
+    { name: 'Abstain', name_ko:'기권', value: abstain.value, class: 'bg-warning' },
   ];
 });
 
@@ -207,7 +207,7 @@ function pageload(p: number) {
       <div class="bg-base-100 px-4 pt-3 pb-4 rounded shadow">
         <h2 class="card-title mb-1">{{ $t('gov.tally') }}</h2>
         <div class="mb-1" v-for="(item, index) of processList" :key="index">
-          <label class="block text-sm mb-1">{{ item.name }}</label>
+          <label class="block text-sm mb-1">{{ item.name_ko }}</label>
           <div class="h-5 w-full relative">
             <div
               class="absolute inset-x-0 inset-y-0 w-full opacity-10 rounded-sm"

@@ -135,7 +135,7 @@
     "current_status": "현재 상태",
     "proposal_statuses": {
       "PROPOSAL_STATUS_DEPOSIT_PERIOD": "보즘금 입금 기간",
-      "PROPOSAL_STATUS_VOTING_PERIOD": "투표 기간",
+      "PROPOSAL_STATUS_VOTING_PERIOD": "투표중",
       "PROPOSAL_STATUS_PASSED": "승인됨",
       "PROPOSAL_STATUS_REJECTED": "거절됨",
       "PROPOSAL_STATUS_FAILED": "실패"
